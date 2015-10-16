@@ -10,12 +10,12 @@
     function config($routeProvider) {
         $routeProvider
             .when('/list', {
-                templateUrl: '/js/app/list.html',
+                templateUrl: '/js/list.html',
                 controller: 'ListController',
                 controllerAs: 'listCtrl'
             })
             .when('/details/:audioId', {
-                templateUrl: '/js/app/details.html',
+                templateUrl: '/js/details.html',
                 controller: 'DetailsController',
                 controllerAs: 'detCtrl'
             })
