@@ -12,10 +12,14 @@
     function ListController(api) {
 
         var self = this;
+        self.error = false;
 
         api.getMediaList()
             .then(function(data) {
-                self.audiolist = data;
+                if (!data.length)
+                    self.error = true;
+                else
+                    self.audiolist = data;
             });
     }
 

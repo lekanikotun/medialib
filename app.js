@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(expressSession(
     {
-        secret: 'getting hungry',
+        secret: 'randomtext',
         saveUninitialized: false,
         resave: false,
         store: new MongoStore({
