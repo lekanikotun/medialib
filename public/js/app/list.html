@@ -1,0 +1,18 @@
+<div class="textwidget margin-top-30">
+    <h1>{{listCtrl.data}}</h1>
+    <p>Simply create an account to get started, and you will have instant access to our online library.</p>
+</div>
+<div class="widget">
+    <h1>Order number:</h1>
+    <strong ng-show="!listCtrl.audiolist">Loading...</strong>
+    <ol ng-show="listCtrl.audiolist">
+        <li ng-repeat="file in listCtrl.audiolist | orderBy:'id'">
+            <h2><a ng-href="#/details/{{file.id}}">{{file.title}}</a></h2>
+            <strong ng-bind="file.artist"></strong>
+            <p ng-bind="file.album"></p>
+            <p ng-bind="file.year"></p>
+            <p ng-bind="file.filename"></p>
+            <audio ng-src="{{file.fullpath}}" controls></audio>
+        </li>
+    </ol>
+</div>

@@ -1,0 +1,18 @@
+<div class="textwidget margin-top-30">
+    <strong ng-click="detCtrl.back()"><< Back</strong>
+    <strong ng-show="!detCtrl.media">Loading...</strong>
+    <strong ng-show="detCtrl.media.error" ng-bind="detCtrl.media.error"></strong>
+    <h1 ng-show="detCtrl.media.id">Title: {{detCtrl.media.title}} - ID: {{detCtrl.media.id}}</h1>
+</div>
+<div ng-show="detCtrl.media.id" class="widget">
+    <ol>
+        <li>
+            <h2 ng-bind="detCtrl.media.title"></h2>
+            <strong ng-bind="detCtrl.media.artist"></strong>
+            <p ng-bind="detCtrl.media.album"></p>
+            <p ng-bind="detCtrl.media.year"></p>
+            <p ng-bind="detCtrl.media.filename"></p>
+            <audio ng-src="{{detCtrl.media.fullpath}}" controls></audio>
+        </li>
+    </ol>
+</div>

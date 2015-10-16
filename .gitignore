@@ -1,0 +1,10 @@
+/node_modules
+/data
+mongod-start
+npm-debug.log
+mongod-start
+media/
+media/audio/
+media/*
+media/audio/*
+.idea/workspace.xml
